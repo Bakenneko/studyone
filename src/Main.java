@@ -119,4 +119,71 @@
 //    }
 //}
 
+//public class Main {
+//  int x = 5;
+//
+//  public static void main(String[] args) {
+//    Main myObj1 = new Main();  // Object 1
+//    Main myObj2 = new Main();  // Object 2
+//    System.out.println(myObj1.x);
+//    System.out.println(myObj2.x);
+//  }
+//} */
+//public class Main {
+//  int x = 5;
+//}
+//public class Main {
+//    public static void main(String[] args) {
+//        Person myObj = new Person();
+//        myObj.setName("Ivan");
+//        System.out.println(myObj.getName());
+//
+//
+//    }
+//}
+//
+//import java.util.*;
+//
+//class Main {
+//    public static void main(String[] args) {
+//        Scanner myObj = new Scanner(System.in);
+//        String userName;
+//
+//        System.out.println("Enter username");
+//        userName = myObj.nextLine();
+//
+//        System.out.println("Username is: " + userName);
+//    }
+//}
+//import java.util.Scanner;
+//public class Main {
+//    public static void main(String[] args) {
+//        System.out.println("Enter the number:");
+//        Scanner in = new Scanner(System.in);
+//        int N = in.nextInt();
+//        for (int i = 1; i <= N; i++) {
+//            // Перевірка, чи число непарне
+//            if (i % 2 != 0)
+//                System.out.println("Number is: " + i);
+//        }
+//    }
+//}
 
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        System.out.println("Enter the number:");
+        Scanner scanner = new Scanner(System.in);
+        int sum = scanner.nextInt();
+
+        int[] euroBillsAndCoins = {500, 200, 100, 50, 20, 10, 5, 2, 1};
+
+        for (int billOrCoin : euroBillsAndCoins) {
+            int count = sum / billOrCoin;
+            System.out.println(count);
+            sum %= billOrCoin;
+        }
+    }
+}
