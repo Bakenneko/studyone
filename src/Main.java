@@ -248,16 +248,39 @@
 //        System.out.println("After formatting: " + formattedDate);
 //    }
 //}
+//* import java.util.ArrayList;
+//public class Main {
+//    public static void main(String[] args) {
+//        ArrayList<Integer> myNum = new ArrayList<>();
+//        myNum.add(1);
+//        myNum.add(3);
+//        myNum.add(5);
+//        myNum.add(7);
+//        myNum.add(9);
+//        myNum.add(11);
+//        myNum.add(13);
+//        for (int i : myNum) {
+//            System.out.println(i);
+//        }
+//    }
+//}
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Main {
     public static void main(String[] args) {
-        ArrayList<String> cars = new ArrayList<String>();
-        cars.add("Volvo");
+        ArrayList<String> cars = new ArrayList<>();
+        cars.add("Dodge");
         cars.add("BMW");
-        cars.add("Ford");
+        cars.add("Cadillac");
+        cars.add("Shelby");
         cars.add("Mazda");
-        System.out.println(cars);
+        cars.add("Toyota");
+        cars.add("Opel");
+        Collections.sort(cars);
+        for (String i : cars) {
+            System.out.println(i);
+        }
     }
 }
