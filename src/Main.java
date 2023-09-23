@@ -264,23 +264,43 @@
 //        }
 //    }
 //}
-
-import java.util.ArrayList;
-import java.util.Collections;
-
-public class Main {
-    public static void main(String[] args) {
-        ArrayList<String> cars = new ArrayList<>();
-        cars.add("Dodge");
-        cars.add("BMW");
-        cars.add("Cadillac");
-        cars.add("Shelby");
-        cars.add("Mazda");
-        cars.add("Toyota");
-        cars.add("Opel");
-        Collections.sort(cars);
-        for (String i : cars) {
-            System.out.println(i);
-        }
-    }
-}
+//import java.util.ArrayList;
+//import java.util.Collections;
+//
+//public class Main {
+//    public static void main(String[] args) {
+//        ArrayList<String> cars = new ArrayList<>();
+//        cars.add("Dodge");
+//        cars.add("BMW");
+//        cars.add("Cadillac");
+//        cars.add("Shelby");
+//        cars.add("Mazda");
+//        cars.add("Toyota");
+//        cars.add("Opel");
+//        Collections.sort(cars);
+//        for (String i : cars) {
+//            System.out.println(i);
+//        }
+//    }
+//}
+//import java.util.ArrayList;
+//import java.util.Collections;
+//
+//public class Main {
+//    public static void main(String[] args) {
+//        ArrayList<Integer> myNum = new ArrayList<>();
+//        myNum.add(8);
+//        myNum.add(28);
+//        myNum.add(81);
+//        myNum.add(38);
+//        myNum.add(80);
+//        myNum.add(48);
+//        myNum.add(808);
+//        myNum.add(118);
+//        myNum.add(18);
+//        Collections.sort(myNum);
+//        for (int i : myNum) {
+//            System.out.println(i);
+//        }
+//    }
+//}
