@@ -168,22 +168,83 @@
 //        }
 //    }
 //}
+//
+//interface Animal { }
+//
+//class Pig implements Animal {
+//    public void animalSound() {
+//        System.out.println("The pig says: wee wee");
+//    }
+//    public void sleep() {
+//        System.out.println("Zzz");
+//    }
+//}
+//
+//class Main {
+//    public static void main(String[] args) {
+//        Pig myPig = new Pig();
+//        myPig.animalSound();
+//        myPig.sleep();
+//    }
+//}
+//public class Main {
+//    enum Level {
+//        LOW, MEDIUM, HIGH
+//    }
+//    public static void main(String[] args) {
+//        Level myLvl = Level.MEDIUM;
+//        System.out.println(myLvl);
+//
+//        for (Level myLvl1 : Level.values()) {
+//            System.out.println(myLvl1);
+//        }
+//    }
+//}
+//import java.util.Scanner;
+//class Main {
+//    public static void main(String[] args) {
+//        Scanner myObj = new Scanner(System.in);
+//        System.out.println("Enter name, age and salary:");
+//        String name = myObj.nextLine();
+//        int age = myObj.nextInt();
+//        double salary = myObj.nextDouble();
+//        System.out.println("Name: " + name);
+//        System.out.println("Age: " + age);
+//        System.out.println("Salary: " + salary);
+//    }
+//}
+//import java.time.LocalDate; // import the LocalDate class
+//public class Main {
+//    public static void main(String[] args) {
+//        LocalDate myObj = LocalDate.now(); // Create a date object
+//        System.out.println(myObj); // Display the current date
+//    }
+//}
+//import java.time.LocalTime; // import the LocalTime class
+//public class Main {
+//    public static void main(String[] args) {
+//        LocalTime myObj = LocalTime.now();
+//        System.out.println(myObj);
+//    }
+//}
 
-import java.util.Scanner;
+//import java.time.LocalDateTime;
+//public class Main{
+//    public static void main(String[] args) {
+//        LocalDateTime myTime = LocalDateTime.now();
+//        System.out.println(myTime);
+//    }
+//}
+
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class Main {
-
     public static void main(String[] args) {
-        System.out.println("Enter the number:");
-        Scanner scanner = new Scanner(System.in);
-        int sum = scanner.nextInt();
-
-        int[] euroBillsAndCoins = {500, 200, 100, 50, 20, 10, 5, 2, 1};
-
-        for (int billOrCoin : euroBillsAndCoins) {
-            int count = sum / billOrCoin;
-            System.out.println(count);
-            sum %= billOrCoin;
-        }
+        LocalDateTime myDateObj = LocalDateTime.now();
+        System.out.println("Before formatting: " + myDateObj);
+        DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm:ss");
+        String formattedDate = myDateObj.format(myFormatObj);
+        System.out.println("After formatting: " + formattedDate);
     }
 }
