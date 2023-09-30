@@ -387,7 +387,9 @@ class Main {
 
     public static void main(String[] args) {
         Scanner read = new Scanner(System.in);
+        System.out.println("Enter name: ");
         String name = read.nextLine();
+        System.out.println("Enter age: ");
         int age = read.nextInt();
         Student student = new Student();
         student.setName(name);

@@ -5,6 +5,9 @@ class Student {
     public int getAge() {
         return age;
     }
+    public String getName() {
+        return name;
+    }
     public void setAge(int age) {
         if (age < 0) {
             System.out.println("Invalid age");
@@ -13,9 +16,7 @@ class Student {
             this.age = age;
         }
     }
-    public String getName() {
-        return name;
-    }
+
     public void setName(String name) {
         this.name = name;
     }
