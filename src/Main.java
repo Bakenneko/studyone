@@ -304,3 +304,96 @@
 //        }
 //    }
 //}
+
+//public class Main {
+//    public static void main(String[] args) {
+//        int a = 10;
+//        int b = 20;
+//        int numberOfWheels = getNumber(a, b);
+//        System.out.println(numberOfWheels);
+//    }
+//
+//    public static int getNumber(int a, int b) {
+//        return 2 * a + 4 * b;
+//    }
+//
+//}
+//
+//public class Main {
+//    public static void main(String[] args) {
+//        System.out.println(findNb(1071225)); // Виведе 45
+//        System.out.println(findNb(91716553919377L)); // Виведе -1
+//    }
+//
+//    public static long findNb(long m) {
+//        long sum = 0;
+//        long n = 1;
+//
+//        while (sum < m) {
+//            sum += n * n * n;
+//            if (sum == m) {
+//                return n;
+//            }
+//            n++;
+//        }
+//
+//        return -1;
+//    }
+//}
+//public class Main {
+//    public static void main(String[] args) {
+//        Box<Integer> intBox = new Box<>(42);
+//        Box<String> strBox = new Box<>("Hello, Generics!");
+//
+//        int intValue = intBox.getData();
+//        String strValue = strBox.getData();
+//
+//        System.out.println(intValue); // 42
+//        System.out.println(strValue); // Hello, Generics!
+//    }
+//}
+
+//import java.util.Scanner;
+//
+//public class Main {
+//
+//    public static void main(String[] args) {
+//        Scanner read = new Scanner(System.in);
+//
+//        System.out.print("Enter First Name: ");
+//        String firstName = read.nextLine();
+//
+//        System.out.print("Enter Second name: ");
+//        String secondName = read.nextLine();
+//
+//        System.out.print("Enter age: ");
+//        int age = read.nextInt();
+//
+//        System.out.print("Enter room number: ");
+//        int roomNumber = read.nextInt();
+//
+//        Customer customer = new Customer();
+//        customer.firstName = firstName;
+//        customer.secondName = secondName;
+//        customer.age = age;
+//        customer.roomNumber = roomNumber;
+//
+//        customer.saveCustomerInfo();
+//    }
+//}
+import java.util.Scanner;
+
+class Main {
+
+    public static void main(String[] args) {
+        Scanner read = new Scanner(System.in);
+        String name = read.nextLine();
+        int age = read.nextInt();
+        Student student = new Student();
+        student.setName(name);
+        student.setAge(age);
+
+        System.out.println("Name: " + student.getName());
+        System.out.println("Age: " + student.getAge());
+    }
+}
