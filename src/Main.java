@@ -381,21 +381,37 @@
 //        customer.saveCustomerInfo();
 //    }
 //}
+//import java.util.Scanner;
+//
+//class Main {
+//
+//    public static void main(String[] args) {
+//        Scanner read = new Scanner(System.in);
+//        System.out.println("Enter name: ");
+//        String name = read.nextLine();
+//        System.out.println("Enter age: ");
+//        int age = read.nextInt();
+//        Student student = new Student();
+//        student.setName(name);
+//        student.setAge(age);
+//
+//        System.out.println("Name: " + student.getName());
+//        System.out.println("Age: " + student.getAge());
+//    }
+//}
+
 import java.util.Scanner;
 
 class Main {
-
     public static void main(String[] args) {
         Scanner read = new Scanner(System.in);
-        System.out.println("Enter name: ");
-        String name = read.nextLine();
-        System.out.println("Enter age: ");
-        int age = read.nextInt();
-        Student student = new Student();
-        student.setName(name);
-        student.setAge(age);
-
-        System.out.println("Name: " + student.getName());
-        System.out.println("Age: " + student.getAge());
+        String movie = read.nextLine();
+        int row = read.nextInt();
+        int seat = read.nextInt();
+        Ticket ticket = new Ticket(movie, row, seat);
+        System.out.println("Movie: " + ticket.movie());
+        System.out.println("Row: " + ticket.row());
+        System.out.println("Seat: " + ticket.seat());
     }
 }
+
