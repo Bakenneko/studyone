@@ -355,6 +355,39 @@
 
 //import java.util.Scanner;
 //
+//class Main {
+//
+//    public static void main(String[] args) {
+//        Scanner read = new Scanner(System.in);
+//        System.out.println("Enter name: ");
+//        String name = read.nextLine();
+//        System.out.println("Enter age: ");
+//        int age = read.nextInt();
+//        Student student = new Student();
+//        student.setName(name);
+//        student.setAge(age);
+//
+//        System.out.println("Name: " + student.getName());
+//        System.out.println("Age: " + student.getAge());
+//    }
+//}
+
+//import java.util.Scanner;
+//
+//class Main {
+//    public static void main(String[] args) {
+//        Scanner read = new Scanner(System.in);
+//        String movie = read.nextLine();
+//        int row = read.nextInt();
+//        int seat = read.nextInt();
+//        Ticket ticket = new Ticket(movie, row, seat);
+//        System.out.println("Movie: " + ticket.movie());
+//        System.out.println("Row: " + ticket.row());
+//        System.out.println("Seat: " + ticket.seat());
+//    }
+//}
+//import java.util.Scanner;
+//
 //public class Main {
 //
 //    public static void main(String[] args) {
@@ -381,37 +414,94 @@
 //        customer.saveCustomerInfo();
 //    }
 //}
-//import java.util.Scanner;
-//
-//class Main {
-//
-//    public static void main(String[] args) {
-//        Scanner read = new Scanner(System.in);
-//        System.out.println("Enter name: ");
-//        String name = read.nextLine();
-//        System.out.println("Enter age: ");
-//        int age = read.nextInt();
-//        Student student = new Student();
-//        student.setName(name);
-//        student.setAge(age);
-//
-//        System.out.println("Name: " + student.getName());
-//        System.out.println("Age: " + student.getAge());
+
+//public class Main {
+//    static int count = 0;
+//}
+
+//abstract class Shape {
+//    int width;
+//    public Shape(int width) {
+//        this.width = width;
+//    }
+//    abstract void area();
+//}
+//class Square extends Shape {
+//    public Square(int width) {
+//        super(width);
+//    }
+//    @Override
+//    void area() {
+//        int squareArea = width * width;
+//        System.out.println(squareArea);
+//    }
+//}
+//class Circle extends Shape {
+//    public Circle(int width) {
+//        super(width);
+//    }
+//    @Override
+//    void area() {
+//        double circleArea = Math.PI * width * width;
+//        System.out.println(circleArea);
 //    }
 //}
 
+//import java.util.ArrayList;
+//import java.util.Scanner;
+//
+//public class Main {
+//    public static void main(String[] args) {
+//        ArrayList<Integer> evenNums = new ArrayList<>();
+//        Scanner s = new Scanner(System.in);
+//
+//        while (evenNums.size() != 3) {
+//            int num = scanner.nextInt();
+//            evenNums.add(num);
+//        }
+//
+//        int sum = 0;
+//        for (int num : evenNums) {
+//            sum += num;
+//        }
+//
+//        int average = sum / evenNums.size();
+//
+//        System.out.println(average);
+//    }
+//}
+
+import java.util.HashMap;
 import java.util.Scanner;
 
-class Main {
-    public static void main(String[] args) {
-        Scanner read = new Scanner(System.in);
-        String movie = read.nextLine();
-        int row = read.nextInt();
-        int seat = read.nextInt();
-        Ticket ticket = new Ticket(movie, row, seat);
-        System.out.println("Movie: " + ticket.movie());
-        System.out.println("Row: " + ticket.row());
-        System.out.println("Seat: " + ticket.seat());
+public class Main {
+    public static void main(String[ ] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        HashMap<String, Integer> ages = new HashMap<>();
+        ages.put("David", 22);
+        ages.put("Tom", 23);
+        ages.put("Robert", 32);
+        ages.put("Alice", 21);
+        ages.put("Sophie", 19);
+        ages.put("Maria", 24);
+        ages.put("John", 28);
+
+
+        String[] nameArr = new String[ages.size()];
+        nameArr = ages.keySet().toArray(nameArr);
+
+        System.out.println("Введіть число!");
+        int ageLimit = scanner.nextInt();
+
+
+        for (String emp : nameArr){
+            if (ages.get(emp)<ageLimit){
+                ages.remove(emp);
+            }
+        }
+
+        System.out.println(ages);
     }
 }
-
